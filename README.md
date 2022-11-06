@@ -30,6 +30,8 @@ You'll need to compile Boost libraries so you get the "stage\lib" subfolder with
 
 I was also having some issues with the location of the "common" folder. Fixed those by adjusting all the relevant paths in skse64-gog to refer to, e.g. "..\..\common\common_vc14.vcxproj" rather than "..\..\common\common\common_vc14.vcxproj".
 
+This has not been extensively tested, but the plugin does load with my GOG edition and appears to be working correctly with my (large, based on Lexy's guide) mod list.
+
 noxsidereum @ 6 Nov 2022
 
 ------------------------------------

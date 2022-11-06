@@ -85,7 +85,7 @@ namespace MiscUtil {
 		if (ptr != 0) SafeWrite8(ptr + 0x118, (enabled ? 1 : 0));
 	}*/
 	void SetMenus(StaticFunctionTag* base, bool enabled){
-		MenuManager::GetSingleton()->showMenus = enabled;
+		MenuManager::GetSingleton()->ShowMenus(enabled);
 	}
 
 	BSFixedString GetRaceEditorID(StaticFunctionTag* base, TESRace* RaceRef) {

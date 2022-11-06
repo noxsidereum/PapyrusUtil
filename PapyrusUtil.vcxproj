@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -21,33 +13,20 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2804098C-203D-4A51-9D0F-A4918A07A077}</ProjectGuid>
     <RootNamespace>PapyrusUtil</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>PapyrusUtil</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -55,12 +34,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -76,43 +49,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>C:\Modding\MO2\SkyrimAE\mods\PapyrusUtil SE\SKSE\Plugins\</OutDir>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-    </ClCompile>
-    <Link>
-      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;%(AdditionalIncludeDirectories);E:\Libs\boost171;E:\Libs\jsoncpp19</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>common/IPrefix.h</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0;C:\plugin_src\jsoncpp-1.9.5</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>IPrefix.h</ForcedIncludeFiles>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>E:\Libs\boost171\stage\x64\lib</AdditionalLibraryDirectories>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-    </ClCompile>
-    <Link>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>D:\boost_1_80_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusVM.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\HashUtil.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameUtilities.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusInterfaces.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\NIObjects.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameExtraData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameFormComponents.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameBSExtraData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameTypes.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameReferences.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameAPI.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameRTTI.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameForms.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameSettings.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusArgs.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\BranchTrampoline.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\SafeWrite.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\Relocation.obj;C:\plugin_src\common\x64_v143\Release\IDebugLog.obj;C:\plugin_src\common\x64_v143\Release\IErrors.obj;C:\plugin_src\common\x64_v143\Release\IFileStream.obj;C:\plugin_src\common\x64_v143\Release\IDataStream.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,15 +73,16 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;%(AdditionalIncludeDirectories);H:\Libs\boost_1_77_0;E:\Libs\jsoncpp19</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>common/IPrefix.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0;C:\plugin_src\jsoncpp-1.9.5</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>IPrefix.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>exports.def</ModuleDefinitionFile>
-      <AdditionalLibraryDirectories>H:\Libs\boost_1_77_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\boost_1_80_0\stage\lib;$(SolutionDir)..\common\x64_v143\Release;$(SolutionDir)..\skse64-gog\x64\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusVM.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\HashUtil.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameUtilities.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusInterfaces.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\NIObjects.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameExtraData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameFormComponents.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameBSExtraData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameTypes.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameReferences.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameAPI.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameRTTI.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameData.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameForms.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\GameSettings.obj;C:\plugin_src\skse64-gog\skse64\x64\Release\PapyrusArgs.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\BranchTrampoline.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\SafeWrite.obj;C:\plugin_src\skse64-gog\skse64_common\x64\Release\Relocation.obj;C:\plugin_src\common\x64_v143\Release\IDebugLog.obj;C:\plugin_src\common\x64_v143\Release\IErrors.obj;C:\plugin_src\common\x64_v143\Release\IFileStream.obj;C:\plugin_src\common\x64_v143\Release\IDataStream.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -173,17 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="exports.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\common\common_vc14.vcxproj">
-      <Project>{472e19ab-def0-42df-819b-18722e8dc822}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\skse64\skse64.vcxproj">
-      <Project>{7028b79c-06e3-4d9a-b38c-1dc3680b1bdb}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="PapyrusUtil.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

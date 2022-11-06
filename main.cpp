@@ -35,8 +35,9 @@ extern "C" {
 		"Ashal",
 		"Ashal@loverslab.com",
 
-		SKSEPluginVersionData::kVersionIndependent_AddressLibraryPostAE,
-		{ RUNTIME_VERSION_1_6_353, 0 },
+		0,
+		0,
+		{ RUNTIME_VERSION_1_6_659_GOG, 0 },
 
 		0,	// works with any version of the script extender. you probably do not need to put anything here
 	};

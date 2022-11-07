@@ -55,7 +55,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0;C:\plugin_src\jsoncpp-1.9.5</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>IPrefix.h</ForcedIncludeFiles>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -73,7 +73,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0;C:\plugin_src\jsoncpp-1.9.5</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)..;$(SolutionDir)..\common;$(SolutionDir)..\skse64-gog;%(AdditionalIncludeDirectories);D:\boost_1_80_0</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>IPrefix.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>

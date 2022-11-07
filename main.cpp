@@ -64,6 +64,9 @@ extern "C" {
 			return false;
 		}
 
+		// DEBUGGING: Dump address IDs and offsets for Skyrim AE GOG (1.6.659)
+		// Plugin::DumpSpecificVersion();
+
 		// get trampoline interface
 		/*g_trampoline = (SKSETrampolineInterface*)skse->QueryInterface(kInterface_Trampoline);
 		if (!g_trampoline) {
